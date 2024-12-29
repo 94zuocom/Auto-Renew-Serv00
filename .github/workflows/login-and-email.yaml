@@ -2,7 +2,7 @@ name: Auto Login and Email Result
 
 on:
   schedule:
-    - cron: "0 0 */60 * *"
+    - cron: "0 0 */7 * *"
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
@@ -29,12 +29,12 @@ jobs:
           USERNAME1: ${{ secrets.USERNAME1 }}
           PASSWORD1: ${{ secrets.PASSWORD1 }}
           PANEL_INDEX1: ${{ secrets.PANEL_INDEX1 }}
-          USERNAME2: ${{ secrets.USERNAME2 }}
-          PASSWORD2: ${{ secrets.PASSWORD2 }}
-          PANEL_INDEX2: ${{ secrets.PANEL_INDEX2 }}
-          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+          # USERNAME2: ${{ secrets.USERNAME2 }}
+          # PASSWORD2: ${{ secrets.PASSWORD2 }}
+          # PANEL_INDEX2: ${{ secrets.PANEL_INDEX2 }}
+          # EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+          # EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          # SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          # SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          # TO_EMAIL: ${{ secrets.TO_EMAIL }}
         run: python script.py
