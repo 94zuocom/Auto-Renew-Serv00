@@ -71,24 +71,23 @@
 # except Exception as e:
 #     print(f"邮件发送失败: {e}")
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+# # import smtplib
+# from email.mime.text import MIMEText
+# from email.mime.multipart import MIMEMultipart
 from playwright.sync_api import sync_playwright
 import os
 
 # 从环境变量中获取账户信息和后台序数
 accounts = [
-    {"username": os.getenv("USERNAME1"), "password": os.getenv("PASSWORD1"), "panel_index": os.getenv("PANEL_INDEX1")},
-    {"username": os.getenv("USERNAME2"), "password": os.getenv("PASSWORD2"), "panel_index": os.getenv("PANEL_INDEX2")}
+    {"username": os.getenv("USERNAME1"), "password": os.getenv("PASSWORD1"), "panel_index": os.getenv("PANEL_INDEX1")}
 ]
 
-# SMTP配置
-smtp_server = os.getenv("SMTP_SERVER")
-smtp_port = int(os.getenv("SMTP_PORT"))
-smtp_username = os.getenv("EMAIL_USERNAME")
-smtp_password = os.getenv("EMAIL_PASSWORD")
-recipient_email = os.getenv("TO_EMAIL")
+# # SMTP配置
+# smtp_server = os.getenv("SMTP_SERVER")
+# smtp_port = int(os.getenv("SMTP_PORT"))
+# smtp_username = os.getenv("EMAIL_USERNAME")
+# smtp_password = os.getenv("EMAIL_PASSWORD")
+# recipient_email = os.getenv("TO_EMAIL")
 
 # 登录并检查状态的函数
 def login_and_check(account):
